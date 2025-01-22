@@ -74,8 +74,59 @@ while running:
             player = 1
 
     if a1 == 1:
-        pygame.draw.line(screen, "red", (0, 0), ((screen.get_width() / 3), (screen.get_height() / 3)), width=3)
-        pygame.draw.line(screen, "red", ((screen.get_width() / 3), 0), (0, (screen.get_height() / 3)), width=3)
+        pygame.draw.line(screen, "red", (10, 10), (((screen.get_width() / 3) - 10), ((screen.get_height() / 3) - 10)), width=5)
+        pygame.draw.line(screen, "red", (((screen.get_width() / 3) - 10), 10), (10, ((screen.get_height() / 3) - 10)), width=5)
+    elif a1 == 2:
+        pygame.draw.circle(screen, "blue", ((screen.get_width() / 6), (screen.get_height() / 6)), (screen.get_height() / 7), width=5)
+    if b1 == 1:
+        pygame.draw.line(screen, "red", (((screen.get_width() / 3) + 10), 10), ((((screen.get_width() * 2) / 3) - 10), ((screen.get_height() / 3) - 10)), width=5)
+        pygame.draw.line(screen, "red", ((((screen.get_width() * 2) / 3) - 10), 10), (((screen.get_width() / 3) + 10), ((screen.get_height() / 3) - 10)), width=5)
+    elif b1 == 2:
+        pygame.draw.circle(screen, "blue", ((screen.get_width() / 2), (screen.get_height() / 6)), (screen.get_height() / 7), width=5)
+    if c1 == 1:
+        pygame.draw.line(screen, "red", ((((screen.get_width() * 2) / 3) + 10), 10), ((screen.get_width() - 10), ((screen.get_height() / 3) - 10)), width=5)
+        pygame.draw.line(screen, "red", ((screen.get_width() - 10), 10), (((screen.get_width() / 3 * 2) + 10), ((screen.get_height() / 3) - 10)), width=5)
+    elif c1 == 2:
+        pygame.draw.circle(screen, "blue", (((screen.get_width() * 5) / 6), (screen.get_height() / 6)), (screen.get_height() / 7), width=5)
+    if a2 == 1:
+        pygame.draw.line(screen, "red", (10, ((screen.get_height() / 3) + 10)), (((screen.get_width() / 3) - 10), (((screen.get_height() * 2) / 3) - 10)),
+                         width=5)
+        pygame.draw.line(screen, "red", (((screen.get_width() / 3) - 10), ((screen.get_height() / 3) + 10)), (10, (((screen.get_height() * 2) / 3) - 10)),
+                         width=5)
+    elif a2 == 2:
+        pygame.draw.circle(screen, "blue", ((screen.get_width() / 6), (screen.get_height() / 2)),
+                           (screen.get_height() / 7), width=5)
+    if b2 == 1:
+        pygame.draw.line(screen, "red", (((screen.get_width() / 3) + 10), ((screen.get_height() / 3) + 10)),
+                         ((((screen.get_width() * 2) / 3) - 10), (((screen.get_height() * 2) / 3) - 10)), width=5)
+        pygame.draw.line(screen, "red", ((((screen.get_width() * 2) / 3) - 10), ((screen.get_height() / 3) + 10)),
+                         (((screen.get_width() / 3) + 10), (((screen.get_height() * 2) / 3) - 10)), width=5)
+    elif b2 == 2:
+        pygame.draw.circle(screen, "blue", ((screen.get_width() / 2), (screen.get_height() / 2)),
+                           (screen.get_height() / 7), width=5)
+    if c2 == 1:
+        pygame.draw.line(screen, "red", ((((screen.get_width() * 2) / 3) + 10), ((screen.get_height() / 3) + 10)),
+                         ((screen.get_width() - 10), (((screen.get_height() * 2) / 3) - 10)), width=5)
+        pygame.draw.line(screen, "red", ((screen.get_width() - 10), ((screen.get_height() / 3) + 10)),
+                         (((screen.get_width() / 3 * 2) + 10), (((screen.get_height() * 2) / 3) - 10)), width=5)
+    elif c2 == 2:
+        pygame.draw.circle(screen, "blue", (((screen.get_width() * 5) / 6), (screen.get_height() / 2)),
+                           (screen.get_height() / 7), width=5)
+    if a3 == 1:
+        pygame.draw.line(screen, "red", (10, (((screen.get_height() * 2) / 3) + 10)), (((screen.get_width() / 3) - 10), (screen.get_height() - 10)), width=5)
+        pygame.draw.line(screen, "red", (((screen.get_width() / 3) - 10), (((screen.get_height() * 2) / 3) + 10)), (10, (screen.get_height() - 10)), width=5)
+    elif a3 == 2:
+        pygame.draw.circle(screen, "blue", ((screen.get_width() / 6), ((screen.get_height() * 5) / 6)), (screen.get_height() / 7), width=5)
+    if b3 == 1:
+        pygame.draw.line(screen, "red", (((screen.get_width() / 3) + 10), (((screen.get_height() * 2) / 3) + 10)), ((((screen.get_width() * 2) / 3) - 10), (screen.get_height() - 10)), width=5)
+        pygame.draw.line(screen, "red", ((((screen.get_width() * 2) / 3) - 10), (((screen.get_height() * 2) / 3) + 10)), (((screen.get_width() / 3) + 10), (screen.get_height() - 10)), width=5)
+    elif b3 == 2:
+        pygame.draw.circle(screen, "blue", ((screen.get_width() / 2), ((screen.get_height() * 5)/ 6)), (screen.get_height() / 7), width=5)
+    if c3 == 1:
+        pygame.draw.line(screen, "red", ((((screen.get_width() * 2) / 3) + 10), (((screen.get_height() * 2) / 3) + 10)), ((screen.get_width() - 10), (screen.get_height() - 10)), width=5)
+        pygame.draw.line(screen, "red", ((screen.get_width() - 10), (((screen.get_height() * 2) / 3) + 10)), (((screen.get_width() / 3 * 2) + 10), (screen.get_height() - 10)), width=5)
+    elif c3 == 2:
+        pygame.draw.circle(screen, "blue", (((screen.get_width() * 5) / 6), ((screen.get_height() * 5) / 6)), (screen.get_height() / 7), width=5)
 
     if clear:
         a1, b1, c1, a2, b2, c2, a3, b3, c3 = 0, 0, 0, 0, 0, 0, 0, 0, 0
