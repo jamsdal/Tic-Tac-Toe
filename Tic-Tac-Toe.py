@@ -6,6 +6,7 @@ clock = pygame.time.Clock()
 running = True
 click = False
 clear = False
+change_player = False
 a1, b1, c1, a2, b2, c2, a3, b3, c3 = 0, 0, 0, 0, 0, 0, 0, 0, 0
 player = 1
 dt = 0
@@ -41,37 +42,48 @@ while running:
         if (mouse[0] < (screen.get_width() / 3)) and (mouse[1] < (screen.get_height() / 3)):
             if a1 == 0:
                 a1 = player
+                change_player = True
         elif ((mouse[0] < ((screen.get_width() * 2) / 3)) and (mouse[0] > ((screen.get_width()) / 3))) and (mouse[1] < (screen.get_height() / 3)):
             if b1 == 0:
                 b1 = player
+                change_player = True
         elif (mouse[0] > ((screen.get_width() * 2) / 3)) and (mouse[1] < (screen.get_height() / 3)):
             if c1 == 0:
                 c1 = player
+                change_player = True
         elif (mouse[0] < (screen.get_width() / 3)) and ((mouse[1] > (screen.get_height() / 3)) and (mouse[1] < ((screen.get_height() * 2) / 3))):
             if a2 == 0:
                 a2 = player
+                change_player = True
         elif ((mouse[0] < ((screen.get_width() * 2) / 3)) and (mouse[0] > ((screen.get_width()) / 3))) and ((mouse[1] > (screen.get_height() / 3)) and (mouse[1] < ((screen.get_height() * 2) / 3))):
             if b2 == 0:
                 b2 = player
+                change_player = True
         elif (mouse[0] > (screen.get_width() / 3)) and ((mouse[1] > (screen.get_height() / 3)) and (mouse[1] < ((screen.get_height() * 2) / 3))):
             if c2 == 0:
                 c2 = player
+                change_player = True
         elif (mouse[0] < (screen.get_width() / 3)) and (mouse[1] > ((screen.get_height() * 2) / 3)):
             if a3 == 0:
                 a3 = player
+                change_player = True
         elif ((mouse[0] < ((screen.get_width() * 2) / 3)) and (mouse[0] > ((screen.get_width()) / 3))) and (mouse[1] > ((screen.get_height() * 2) / 3)):
             if b3 == 0:
                 b3 = player
+                change_player = True
         else:
             if c3 == 0:
                 c3 = player
+                change_player = True
 
         click = False
         clear = False
-        if player == 1:
-            player = 2
-        else:
-            player = 1
+        if change_player:
+            if player == 1:
+                player = 2
+            else:
+                player = 1
+        change_player = False
 
     if a1 == 1:
         pygame.draw.line(screen, "red", (10, 10), (((screen.get_width() / 3) - 10), ((screen.get_height() / 3) - 10)), width=5)
